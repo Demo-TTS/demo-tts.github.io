@@ -1,4 +1,5 @@
 ---
+layout: splash
 permalink: /
 title: "Adaptive Condition Optimization for Text-to-Speech via Inference-Time Gradient Guidance"
 author_profile: false
@@ -9,13 +10,33 @@ redirect_from:
 ---
 
 <style>
+  #main {
+    max-width: 1500px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .splash .page__content {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .paper-shell {
+    display: grid;
+    gap: 2rem;
+  }
+
   .paper-hero {
-    margin-top: 0.5rem;
-    padding: 2.25rem 2rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1.02fr) minmax(420px, 0.98fr);
+    gap: 1.6rem;
+    margin-top: 0.25rem;
+    padding: 2rem;
     border: 1px solid #d8e0eb;
     border-radius: 24px;
     background: linear-gradient(135deg, #f7fbff 0%, #eef5ff 55%, #f9fafc 100%);
     box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    align-items: center;
   }
 
   .paper-kicker {
@@ -36,7 +57,6 @@ redirect_from:
 
   .paper-subtitle {
     margin: 1rem 0 0;
-    max-width: 46rem;
     font-size: 1.1rem;
     line-height: 1.75;
     color: #374151;
@@ -79,9 +99,8 @@ redirect_from:
 
   .paper-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
     gap: 1.5rem;
-    margin-top: 2rem;
     align-items: start;
   }
 
@@ -106,10 +125,11 @@ redirect_from:
     color: #374151;
   }
 
-  .paper-figure {
-    margin-top: 2rem;
+  .paper-hero-figure {
+    margin: 0;
   }
 
+  .paper-hero-figure img,
   .paper-figure img {
     display: block;
     width: 100%;
@@ -124,6 +144,13 @@ redirect_from:
     margin: 0.8rem 0 0;
     font-size: 0.97rem;
     line-height: 1.7;
+    color: #4b5563;
+  }
+
+  .paper-hero-note {
+    margin-top: 0.8rem;
+    font-size: 0.96rem;
+    line-height: 1.65;
     color: #4b5563;
   }
 
@@ -142,8 +169,23 @@ redirect_from:
     word-break: break-word;
   }
 
+  .paper-figure {
+    margin: 0;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+  }
+
   @media (max-width: 900px) {
+    #main {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
     .paper-hero {
+      grid-template-columns: 1fr;
       padding: 1.5rem 1.2rem;
     }
 
@@ -153,71 +195,77 @@ redirect_from:
   }
 </style>
 
-<section class="paper-hero">
-  <p class="paper-kicker">TTS Paper Demo</p>
-  <h1 class="paper-title">Adaptive Condition Optimization for Text-to-Speech via Inference-Time Gradient Guidance</h1>
-  <p class="paper-subtitle">
-    Aco-TTS is a training-free inference-time guidance framework for zero-shot
-    text-to-speech. It dynamically refines the conditioning signal during
-    sampling using reward gradients, enabling online correction of the flow
-    trajectory for better intelligibility and perceptual quality.
-  </p>
+<div class="paper-shell">
+  <section class="paper-hero">
+    <div>
+      <p class="paper-kicker">TTS Paper Demo</p>
+      <h1 class="paper-title">Adaptive Condition Optimization for Text-to-Speech via Inference-Time Gradient Guidance</h1>
+      <p class="paper-subtitle">
+        Aco-TTS is a training-free inference-time guidance framework for
+        zero-shot text-to-speech. It dynamically refines the conditioning signal
+        during sampling using reward gradients, enabling online correction of
+        the flow trajectory for better intelligibility and perceptual quality.
+      </p>
 
-  <div class="paper-actions">
-    <a class="paper-button primary" href="/files/Aco_TTS.pdf">Read Paper</a>
-    <a class="paper-button secondary" href="https://github.com/Demo-TTS/ACO-TTS">View Code</a>
-  </div>
-</section>
+      <div class="paper-actions">
+        <a class="paper-button primary" href="/files/Aco_TTS.pdf">Read Paper</a>
+        <a class="paper-button secondary" href="https://github.com/Demo-TTS/ACO-TTS">View Code</a>
+      </div>
 
-<section class="paper-grid">
-  <div class="paper-card">
-    <h2>Abstract</h2>
-    <p>
-      Existing zero-shot text-to-speech systems typically adopt a two-stage
-      architecture combining a large language model with flow matching.
-      However, flow matching follows an open-loop inference process without
-      real-time correction during sampling, leading to speech distortion and
-      unstable quality. A key limitation is that the condition is computed once
-      before sampling and fixed throughout inference. Yet as the generation
-      trajectory evolves, a static condition cannot adapt accordingly. To
-      address this, we propose Adaptive Condition Optimization for Text-to-Speech
-      (Aco-TTS), a gradient-guided framework for inference-time optimization
-      that dynamically refines the condition during sampling using textual
-      alignment and perceptual quality as guidance. This enables online
-      correction and better constrains the flow trajectory. Aco-TTS is
-      training-free and improves generation through gradient-based feedback at
-      inference time. Experiments on SeedTTS, LibriSpeech, and AIShell-1
-      demonstrate significant reductions in word error rate and improvements in
-      audio quality.
-    </p>
-  </div>
+      <p class="paper-hero-note">
+        Training-free guidance at inference time for more robust zero-shot TTS.
+      </p>
+    </div>
 
-  <aside class="paper-card paper-meta">
-    <div class="paper-meta-item">
-      <strong>Project</strong>
-      <span>Aco-TTS Demo Page</span>
-    </div>
-    <div class="paper-meta-item">
-      <strong>Paper PDF</strong>
-      <a href="/files/Aco_TTS.pdf">/files/Aco_TTS.pdf</a>
-    </div>
-    <div class="paper-meta-item">
-      <strong>Code</strong>
-      <a href="https://github.com/Demo-TTS/ACO-TTS">https://github.com/Demo-TTS/ACO-TTS</a>
-    </div>
-    <div class="paper-meta-item">
-      <strong>Demo Site</strong>
-      <a href="https://demo-tts.github.io/">https://demo-tts.github.io/</a>
-    </div>
-  </aside>
-</section>
+    <figure class="paper-hero-figure">
+      <img src="/images/aco-tts/full-architect.png" alt="Aco-TTS architecture overview">
+      <p class="paper-caption">
+        Main architecture overview of Aco-TTS and its adaptive condition
+        optimization process.
+      </p>
+    </figure>
+  </section>
 
-<section class="paper-figure">
-  <h2>Main Figure</h2>
-  <img src="/images/aco-tts/full-architect.png" alt="Aco-TTS architecture overview">
-  <p class="paper-caption">
-    Overview of the Aco-TTS framework. The figure illustrates how adaptive
-    condition optimization injects reward-guided feedback into inference-time
-    sampling for text-to-speech generation.
-  </p>
-</section>
+  <section class="paper-grid">
+    <div class="paper-card">
+      <h2>Abstract</h2>
+      <p>
+        Existing zero-shot text-to-speech systems typically adopt a two-stage
+        architecture combining a large language model with flow matching.
+        However, flow matching follows an open-loop inference process without
+        real-time correction during sampling, leading to speech distortion and
+        unstable quality. A key limitation is that the condition is computed
+        once before sampling and fixed throughout inference. Yet as the
+        generation trajectory evolves, a static condition cannot adapt
+        accordingly. To address this, we propose Adaptive Condition
+        Optimization for Text-to-Speech (Aco-TTS), a gradient-guided framework
+        for inference-time optimization that dynamically refines the condition
+        during sampling using textual alignment and perceptual quality as
+        guidance. This enables online correction and better constrains the flow
+        trajectory. Aco-TTS is training-free and improves generation through
+        gradient-based feedback at inference time. Experiments on SeedTTS,
+        LibriSpeech, and AIShell-1 demonstrate significant reductions in word
+        error rate and improvements in audio quality.
+      </p>
+    </div>
+
+    <aside class="paper-card paper-meta">
+      <div class="paper-meta-item">
+        <strong>Project</strong>
+        <span>Aco-TTS Demo Page</span>
+      </div>
+      <div class="paper-meta-item">
+        <strong>Paper PDF</strong>
+        <a href="/files/Aco_TTS.pdf">/files/Aco_TTS.pdf</a>
+      </div>
+      <div class="paper-meta-item">
+        <strong>Code</strong>
+        <a href="https://github.com/Demo-TTS/ACO-TTS">https://github.com/Demo-TTS/ACO-TTS</a>
+      </div>
+      <div class="paper-meta-item">
+        <strong>Demo Site</strong>
+        <a href="https://demo-tts.github.io/">https://demo-tts.github.io/</a>
+      </div>
+    </aside>
+  </section>
+</div>
