@@ -169,6 +169,59 @@ redirect_from:
     word-break: break-word;
   }
 
+  .paper-demos {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .paper-demo-card {
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+  }
+
+  .paper-demo-card h3 {
+    margin: 0 0 0.75rem;
+    color: #111827;
+  }
+
+  .paper-demo-text {
+    display: grid;
+    gap: 0.65rem;
+    margin-bottom: 1rem;
+    color: #374151;
+    line-height: 1.75;
+  }
+
+  .paper-demo-text strong {
+    color: #111827;
+  }
+
+  .paper-audio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.9rem;
+  }
+
+  .paper-audio-item {
+    padding: 0.9rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    background: #f8fafc;
+  }
+
+  .paper-audio-item strong {
+    display: block;
+    margin-bottom: 0.55rem;
+    color: #111827;
+  }
+
+  .paper-audio-item audio {
+    width: 100%;
+  }
+
   .paper-figure {
     margin: 0;
     padding: 1.5rem;
@@ -190,6 +243,10 @@ redirect_from:
     }
 
     .paper-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .paper-audio-grid {
       grid-template-columns: 1fr;
     }
   }
@@ -267,5 +324,85 @@ redirect_from:
         <a href="https://demo-tts.github.io/">https://demo-tts.github.io/</a>
       </div>
     </aside>
+  </section>
+
+  <section class="paper-demos">
+    <div class="paper-demo-card">
+      <h2>Audio Cases</h2>
+      <div class="paper-demo-text">
+        <div><strong>Prompt text:</strong> You've got the Mayor and Pullman backed against a wall.</div>
+        <div><strong>Target text:</strong> Her old man was Doc Mitchell.</div>
+      </div>
+      <div class="paper-audio-grid">
+        <div class="paper-audio-item">
+          <strong>Prompt</strong>
+          <audio controls preload="none" src="/files/audio-demo/prompt-common_voice_en_2331.wav"></audio>
+        </div>
+        <div class="paper-audio-item">
+          <strong>Seed-TTS</strong>
+          <audio controls preload="none" src="/files/audio-demo/seed-common_voice_en_2331-common_voice_en_2330.wav"></audio>
+        </div>
+        <div class="paper-audio-item">
+          <strong>Aco-TTS-ASR</strong>
+          <audio controls preload="none" src="/files/audio-demo/asr-common_voice_en_2331-common_voice_en_2330.wav"></audio>
+        </div>
+        <div class="paper-audio-item">
+          <strong>Aco-TTS-MOS</strong>
+          <audio controls preload="none" src="/files/audio-demo/mos-common_voice_en_2331-common_voice_en_2330.wav"></audio>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper-demo-card">
+      <h3>Case 2</h3>
+      <div class="paper-demo-text">
+        <div><strong>Prompt text:</strong> I shall be neither more nor less meritorious.</div>
+        <div><strong>Target text:</strong> Tyler, Lucy, Michelle, we're going to space!</div>
+      </div>
+      <div class="paper-audio-grid">
+        <div class="paper-audio-item">
+          <strong>Prompt</strong>
+          <audio controls preload="none" src="/files/audio-demo/prompt-common_voice_en_15734837.wav"></audio>
+        </div>
+        <div class="paper-audio-item">
+          <strong>Seed-TTS</strong>
+          <audio controls preload="none" src="/files/audio-demo/seed-common_voice_en_15734837-common_voice_en_15734838.wav"></audio>
+        </div>
+        <div class="paper-audio-item">
+          <strong>Aco-TTS-ASR</strong>
+          <audio controls preload="none" src="/files/audio-demo/asr-common_voice_en_15734837-common_voice_en_15734838.wav"></audio>
+        </div>
+        <div class="paper-audio-item">
+          <strong>Aco-TTS-MOS</strong>
+          <audio controls preload="none" src="/files/audio-demo/mos-common_voice_en_15734837-common_voice_en_15734838.wav"></audio>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper-demo-card">
+      <h3>Case 3</h3>
+      <div class="paper-demo-text">
+        <div><strong>Prompt text:</strong> On the second day, the boy climbed to the top of a cliff near the camp.</div>
+        <div><strong>Target text:</strong> The area was swirling in dust so intense that it hid the moon from view.</div>
+      </div>
+      <div class="paper-audio-grid">
+        <div class="paper-audio-item">
+          <strong>Prompt</strong>
+          <audio controls preload="none" src="/files/audio-demo/prompt-common_voice_en_17161.wav"></audio>
+        </div>
+        <div class="paper-audio-item">
+          <strong>Seed-TTS</strong>
+          <audio controls preload="none" src="/files/audio-demo/seed-common_voice_en_17161-common_voice_en_17160.wav"></audio>
+        </div>
+        <div class="paper-audio-item">
+          <strong>Aco-TTS-ASR</strong>
+          <audio controls preload="none" src="/files/audio-demo/asr-common_voice_en_17161-common_voice_en_17160.wav"></audio>
+        </div>
+        <div class="paper-audio-item">
+          <strong>Aco-TTS-MOS</strong>
+          <audio controls preload="none" src="/files/audio-demo/mos-common_voice_en_17161-common_voice_en_17160.wav"></audio>
+        </div>
+      </div>
+    </div>
   </section>
 </div>
