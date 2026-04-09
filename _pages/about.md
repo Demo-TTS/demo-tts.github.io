@@ -187,6 +187,38 @@ redirect_from:
     color: #111827;
   }
 
+  .paper-demo-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+    flex-wrap: wrap;
+  }
+
+  .paper-demo-kicker {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.28rem 0.7rem;
+    border-radius: 999px;
+    background: #e8f0ff;
+    color: #1d4ed8;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .paper-demo-section-title {
+    margin: 0 0 0.25rem;
+    color: #111827;
+  }
+
+  .paper-demo-section-note {
+    margin: 0 0 1rem;
+    color: #4b5563;
+    line-height: 1.7;
+  }
+
   .paper-demo-text {
     display: grid;
     gap: 0.65rem;
@@ -328,7 +360,20 @@ redirect_from:
 
   <section class="paper-demos">
     <div class="paper-demo-card">
-      <h2>Audio Cases</h2>
+      <h2 class="paper-demo-section-title">Audio Cases</h2>
+      <p class="paper-demo-section-note">
+        Comparisons use the CosyVoice2 backbone baseline together with the two
+        reward-guided variants from the paper: Aco-TTS-ASR and Aco-TTS-MOS.
+        The English samples come from SeedTTS test-en, and the Chinese samples
+        come from SeedTTS test-zh.
+      </p>
+    </div>
+
+    <div class="paper-demo-card">
+      <div class="paper-demo-heading">
+        <span class="paper-demo-kicker">Case 1</span>
+        <h3>English Demo</h3>
+      </div>
       <div class="paper-demo-text">
         <div><strong>Prompt text:</strong> You've got the Mayor and Pullman backed against a wall.</div>
         <div><strong>Target text:</strong> Her old man was Doc Mitchell.</div>
@@ -339,7 +384,7 @@ redirect_from:
           <audio controls preload="none" src="/files/audio-demo/prompt-common_voice_en_2331.wav"></audio>
         </div>
         <div class="paper-audio-item">
-          <strong>Seed-TTS</strong>
+          <strong>CosyVoice2</strong>
           <audio controls preload="none" src="/files/audio-demo/seed-common_voice_en_2331-common_voice_en_2330.wav"></audio>
         </div>
         <div class="paper-audio-item">
@@ -354,7 +399,10 @@ redirect_from:
     </div>
 
     <div class="paper-demo-card">
-      <h3>Case 2</h3>
+      <div class="paper-demo-heading">
+        <span class="paper-demo-kicker">Case 2</span>
+        <h3>English Demo</h3>
+      </div>
       <div class="paper-demo-text">
         <div><strong>Prompt text:</strong> I shall be neither more nor less meritorious.</div>
         <div><strong>Target text:</strong> Tyler, Lucy, Michelle, we're going to space!</div>
@@ -365,7 +413,7 @@ redirect_from:
           <audio controls preload="none" src="/files/audio-demo/prompt-common_voice_en_15734837.wav"></audio>
         </div>
         <div class="paper-audio-item">
-          <strong>Seed-TTS</strong>
+          <strong>CosyVoice2</strong>
           <audio controls preload="none" src="/files/audio-demo/seed-common_voice_en_15734837-common_voice_en_15734838.wav"></audio>
         </div>
         <div class="paper-audio-item">
@@ -380,7 +428,10 @@ redirect_from:
     </div>
 
     <div class="paper-demo-card">
-      <h3>Case 3</h3>
+      <div class="paper-demo-heading">
+        <span class="paper-demo-kicker">Case 3</span>
+        <h3>English Demo</h3>
+      </div>
       <div class="paper-demo-text">
         <div><strong>Prompt text:</strong> On the second day, the boy climbed to the top of a cliff near the camp.</div>
         <div><strong>Target text:</strong> The area was swirling in dust so intense that it hid the moon from view.</div>
@@ -391,7 +442,7 @@ redirect_from:
           <audio controls preload="none" src="/files/audio-demo/prompt-common_voice_en_17161.wav"></audio>
         </div>
         <div class="paper-audio-item">
-          <strong>Seed-TTS</strong>
+          <strong>CosyVoice2</strong>
           <audio controls preload="none" src="/files/audio-demo/seed-common_voice_en_17161-common_voice_en_17160.wav"></audio>
         </div>
         <div class="paper-audio-item">
@@ -401,6 +452,64 @@ redirect_from:
         <div class="paper-audio-item">
           <strong>Aco-TTS-MOS</strong>
           <audio controls preload="none" src="/files/audio-demo/mos-common_voice_en_17161-common_voice_en_17160.wav"></audio>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper-demo-card">
+      <div class="paper-demo-heading">
+        <span class="paper-demo-kicker">Case 4</span>
+        <h3>Chinese Demo</h3>
+      </div>
+      <div class="paper-demo-text">
+        <div><strong>Prompt text:</strong> 我挣扎了好久，把闹钟定在了八点。</div>
+        <div><strong>Target text:</strong> 自动驾驶将大幅提升出行安全，效率。</div>
+      </div>
+      <div class="paper-audio-grid">
+        <div class="paper-audio-item">
+          <strong>Prompt</strong>
+          <audio controls preload="none" src="/files/audio-demo/prompt-zh-10002739-00000104.wav"></audio>
+        </div>
+        <div class="paper-audio-item">
+          <strong>CosyVoice2</strong>
+          <audio controls preload="none" src="/files/audio-demo/seed-zh-10002739-00000011.wav"></audio>
+        </div>
+        <div class="paper-audio-item">
+          <strong>Aco-TTS-ASR</strong>
+          <audio controls preload="none" src="/files/audio-demo/asr-zh-10002739-00000011.wav"></audio>
+        </div>
+        <div class="paper-audio-item">
+          <strong>Aco-TTS-MOS</strong>
+          <audio controls preload="none" src="/files/audio-demo/mos-zh-10002739-00000011.wav"></audio>
+        </div>
+      </div>
+    </div>
+
+    <div class="paper-demo-card">
+      <div class="paper-demo-heading">
+        <span class="paper-demo-kicker">Case 5</span>
+        <h3>Chinese Demo</h3>
+      </div>
+      <div class="paper-demo-text">
+        <div><strong>Prompt text:</strong> 真正落地成为产品服务进入每个人的生活。</div>
+        <div><strong>Target text:</strong> 就在营救进行的同时，楼下却不断地发出欢呼，起哄声。</div>
+      </div>
+      <div class="paper-audio-grid">
+        <div class="paper-audio-item">
+          <strong>Prompt</strong>
+          <audio controls preload="none" src="/files/audio-demo/prompt-zh-10002481-00000010.wav"></audio>
+        </div>
+        <div class="paper-audio-item">
+          <strong>CosyVoice2</strong>
+          <audio controls preload="none" src="/files/audio-demo/seed-zh-10002481-00000105.wav"></audio>
+        </div>
+        <div class="paper-audio-item">
+          <strong>Aco-TTS-ASR</strong>
+          <audio controls preload="none" src="/files/audio-demo/asr-zh-10002481-00000105.wav"></audio>
+        </div>
+        <div class="paper-audio-item">
+          <strong>Aco-TTS-MOS</strong>
+          <audio controls preload="none" src="/files/audio-demo/mos-zh-10002481-00000105.wav"></audio>
         </div>
       </div>
     </div>
