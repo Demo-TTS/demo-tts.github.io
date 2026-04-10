@@ -95,9 +95,9 @@ redirect_from:
 
   .paper-title {
     margin: 0;
-    max-width: 18ch;
-    font-size: clamp(2.15rem, 4.6vw, 4.2rem);
-    line-height: 1.02;
+    max-width: 22ch;
+    font-size: clamp(2rem, 4.2vw, 3.85rem);
+    line-height: 1.06;
     letter-spacing: -0.03em;
     color: var(--paper-strong);
   }
@@ -207,6 +207,15 @@ redirect_from:
     background: rgba(255, 255, 255, 0.72);
     color: var(--paper-text);
     box-shadow: var(--paper-shadow-md);
+  }
+
+  .paper-hero-meta a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .paper-hero-meta a:hover {
+    color: var(--paper-kicker-text);
   }
 
   html[data-theme="dark"] .paper-hero-meta li {
@@ -338,8 +347,9 @@ redirect_from:
     }
 
     .paper-title {
-      font-size: clamp(1.9rem, 8vw, 3rem);
-      line-height: 1.04;
+      max-width: 17ch;
+      font-size: clamp(1.85rem, 7.5vw, 2.75rem);
+      line-height: 1.08;
       letter-spacing: -0.025em;
     }
 
@@ -375,8 +385,9 @@ redirect_from:
     }
 
     .paper-title {
-      font-size: clamp(1.7rem, 10vw, 2.35rem);
-      line-height: 1.02;
+      max-width: 15ch;
+      font-size: clamp(1.62rem, 9.6vw, 2.18rem);
+      line-height: 1.08;
     }
 
     .paper-actions {
@@ -412,7 +423,7 @@ redirect_from:
   <section class="paper-hero">
     <div>
       <p class="paper-kicker">TTS Paper Demo</p>
-      <h1 class="paper-title">Adaptive Condition Optimization for Text-to-Speech via Inference-Time Gradient Guidance</h1>
+      <h1 class="paper-title">Adaptive Condition Optimization for Text-to-Speech<br>via Inference-Time Gradient Guidance</h1>
     </div>
 
     <figure class="paper-hero-figure">
@@ -430,8 +441,8 @@ redirect_from:
 
     <ul class="paper-hero-meta">
       <li><strong>Project:</strong> Aco-TTS Demo Page</li>
-      <li><strong>Baseline:</strong> CosyVoice2</li>
-      <li><strong>Datasets:</strong> SeedTTS test-en / test-zh</li>
+      <li><strong>Baseline:</strong> <a href="https://github.com/FunAudioLLM/CosyVoice">CosyVoice2</a></li>
+      <li><strong>Demo Dataset:</strong> <a href="https://github.com/BytedanceSpeech/seed-tts-eval">SeedTTS Eval</a></li>
     </ul>
   </section>
 
