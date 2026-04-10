@@ -68,15 +68,16 @@ redirect_from:
 
   .paper-hero {
     display: grid;
-    grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
-    gap: 1.6rem;
+    justify-items: center;
+    text-align: center;
+    gap: 1.25rem;
     margin-top: 0.25rem;
-    padding: 1.7rem 1.8rem;
+    padding: 1.8rem 1.9rem;
     border: 1px solid var(--paper-border);
     border-radius: 24px;
     background: var(--paper-bg);
     box-shadow: var(--paper-shadow-lg);
-    align-items: center;
+    align-items: start;
   }
 
   .paper-hero > * {
@@ -84,7 +85,7 @@ redirect_from:
   }
 
   .paper-kicker {
-    margin: 0 0 0.75rem;
+    margin: 0 0 0.4rem;
     font-size: 0.9rem;
     font-weight: 700;
     letter-spacing: 0.12em;
@@ -94,25 +95,19 @@ redirect_from:
 
   .paper-title {
     margin: 0;
-    font-size: clamp(1.85rem, 3.35vw, 2.95rem);
-    line-height: 1.06;
+    max-width: 18ch;
+    font-size: clamp(2.15rem, 4.6vw, 4.2rem);
+    line-height: 1.02;
     letter-spacing: -0.03em;
     color: var(--paper-strong);
-  }
-
-  .paper-subtitle {
-    margin: 1.15rem 0 0;
-    max-width: 44rem;
-    font-size: 1.02rem;
-    line-height: 1.68;
-    color: var(--paper-text);
   }
 
   .paper-actions {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.85rem;
-    margin-top: 1.15rem;
+    margin-top: 0.15rem;
   }
 
   .paper-button {
@@ -173,6 +168,7 @@ redirect_from:
 
   .paper-hero-figure {
     margin: 0;
+    width: min(100%, 980px);
   }
 
   .paper-hero-figure img,
@@ -191,6 +187,34 @@ redirect_from:
     font-size: 0.97rem;
     line-height: 1.7;
     color: var(--paper-muted);
+    text-align: center;
+  }
+
+  .paper-hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .paper-hero-meta li {
+    padding: 0.72rem 1rem;
+    border: 1px solid var(--paper-card-border);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.72);
+    color: var(--paper-text);
+    box-shadow: var(--paper-shadow-md);
+  }
+
+  html[data-theme="dark"] .paper-hero-meta li {
+    background: rgba(15, 23, 42, 0.72);
+  }
+
+  .paper-hero-meta strong {
+    color: var(--paper-strong);
   }
 
   .paper-meta {
@@ -309,21 +333,14 @@ redirect_from:
     }
 
     .paper-hero {
-      grid-template-columns: 1fr;
       padding: 1.35rem 1.1rem;
       gap: 1.15rem;
     }
 
     .paper-title {
-      font-size: clamp(1.7rem, 8.6vw, 2.45rem);
+      font-size: clamp(1.9rem, 8vw, 3rem);
       line-height: 1.04;
       letter-spacing: -0.025em;
-    }
-
-    .paper-subtitle {
-      margin-top: 0.95rem;
-      font-size: 0.98rem;
-      line-height: 1.62;
     }
 
     .paper-caption {
@@ -358,13 +375,13 @@ redirect_from:
     }
 
     .paper-title {
-      font-size: clamp(1.48rem, 10vw, 2.05rem);
+      font-size: clamp(1.7rem, 10vw, 2.35rem);
       line-height: 1.02;
     }
 
     .paper-actions {
       gap: 0.65rem;
-      margin-top: 0.95rem;
+      margin-top: 0.2rem;
     }
 
     .paper-button {
@@ -379,6 +396,15 @@ redirect_from:
       padding: 1.05rem;
       border-radius: 18px;
     }
+
+    .paper-hero-meta {
+      gap: 0.55rem;
+    }
+
+    .paper-hero-meta li {
+      width: 100%;
+      padding: 0.72rem 0.9rem;
+    }
   }
 </style>
 
@@ -387,17 +413,6 @@ redirect_from:
     <div>
       <p class="paper-kicker">TTS Paper Demo</p>
       <h1 class="paper-title">Adaptive Condition Optimization for Text-to-Speech via Inference-Time Gradient Guidance</h1>
-      <p class="paper-subtitle">
-        Aco-TTS is a training-free inference-time guidance framework for
-        zero-shot text-to-speech. It dynamically refines the conditioning signal
-        during sampling using reward gradients, enabling online correction of
-        the flow trajectory for better intelligibility and perceptual quality.
-      </p>
-
-      <div class="paper-actions">
-        <a class="paper-button primary" href="/files/Aco_TTS.pdf">Read Paper</a>
-        <a class="paper-button secondary" href="https://github.com/Demo-TTS/ACO-TTS">View Code</a>
-      </div>
     </div>
 
     <figure class="paper-hero-figure">
@@ -407,6 +422,17 @@ redirect_from:
         optimization process.
       </p>
     </figure>
+
+    <div class="paper-actions">
+      <a class="paper-button primary" href="/files/Aco_TTS.pdf">Read Paper</a>
+      <a class="paper-button secondary" href="https://github.com/Demo-TTS/ACO-TTS">View Code</a>
+    </div>
+
+    <ul class="paper-hero-meta">
+      <li><strong>Project:</strong> Aco-TTS Demo Page</li>
+      <li><strong>Baseline:</strong> CosyVoice2</li>
+      <li><strong>Datasets:</strong> SeedTTS test-en / test-zh</li>
+    </ul>
   </section>
 
   <section class="paper-grid">

@@ -1,15 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs>
-    <linearGradient id="bg" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#eef4ff"/>
-      <stop offset="1" stop-color="#dbe9ff"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="18" y1="18" x2="46" y2="46" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#4f6ff0"/>
-      <stop offset="1" stop-color="#2747d1"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
-  <path d="M32 11 51 53h-9.5l-3.8-8.8H26.3L22.5 53H13L32 11Zm1.1 12.7-4.1 10h8.3l-4.2-10Z" fill="#111827"/>
-  <path d="M37.2 44.2H26.3l3.2-7.7h10.9l-3.2 7.7Z" fill="url(#accent)"/>
+  <rect width="64" height="64" rx="16" fill="#eef4ff"/>
+  <rect x="10" y="24" width="8" height="16" rx="4" fill="#3658d4"/>
+  <rect x="22" y="18" width="8" height="28" rx="4" fill="#3658d4"/>
+  <rect x="34" y="12" width="8" height="40" rx="4" fill="#111827"/>
+  <rect x="46" y="22" width="8" height="20" rx="4" fill="#3658d4"/>
 </svg>
