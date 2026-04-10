@@ -10,6 +10,46 @@ redirect_from:
 ---
 
 <style>
+  :root {
+    --paper-bg: linear-gradient(135deg, #f7fbff 0%, #eef5ff 55%, #f9fafc 100%);
+    --paper-border: #d8e0eb;
+    --paper-card-bg: #ffffff;
+    --paper-card-border: #e5e7eb;
+    --paper-audio-bg: #f8fafc;
+    --paper-strong: #111827;
+    --paper-text: #374151;
+    --paper-muted: #4b5563;
+    --paper-kicker-bg: #e8f0ff;
+    --paper-kicker-text: #1d4ed8;
+    --paper-button-primary-bg: #0f172a;
+    --paper-button-primary-text: #ffffff;
+    --paper-button-secondary-bg: rgba(255, 255, 255, 0.9);
+    --paper-button-secondary-text: #0f172a;
+    --paper-button-secondary-border: #cbd5e1;
+    --paper-shadow-lg: 0 18px 40px rgba(15, 23, 42, 0.08);
+    --paper-shadow-md: 0 12px 30px rgba(15, 23, 42, 0.05);
+  }
+
+  html[data-theme="dark"] {
+    --paper-bg: linear-gradient(135deg, #111827 0%, #0f172a 55%, #111827 100%);
+    --paper-border: #334155;
+    --paper-card-bg: #111827;
+    --paper-card-border: #334155;
+    --paper-audio-bg: #0f172a;
+    --paper-strong: #f8fafc;
+    --paper-text: #d1d5db;
+    --paper-muted: #94a3b8;
+    --paper-kicker-bg: rgba(59, 130, 246, 0.16);
+    --paper-kicker-text: #93c5fd;
+    --paper-button-primary-bg: #eff6ff;
+    --paper-button-primary-text: #0f172a;
+    --paper-button-secondary-bg: rgba(15, 23, 42, 0.72);
+    --paper-button-secondary-text: #e5eefb;
+    --paper-button-secondary-border: #475569;
+    --paper-shadow-lg: 0 18px 40px rgba(2, 6, 23, 0.32);
+    --paper-shadow-md: 0 12px 30px rgba(2, 6, 23, 0.24);
+  }
+
   #main {
     max-width: 1500px;
     padding-left: 1.5rem;
@@ -32,10 +72,10 @@ redirect_from:
     gap: 1.6rem;
     margin-top: 0.25rem;
     padding: 2rem;
-    border: 1px solid #d8e0eb;
+    border: 1px solid var(--paper-border);
     border-radius: 24px;
-    background: linear-gradient(135deg, #f7fbff 0%, #eef5ff 55%, #f9fafc 100%);
-    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    background: var(--paper-bg);
+    box-shadow: var(--paper-shadow-lg);
     align-items: center;
   }
 
@@ -45,21 +85,21 @@ redirect_from:
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #2563eb;
+    color: var(--paper-kicker-text);
   }
 
   .paper-title {
     margin: 0;
     font-size: clamp(2rem, 4vw, 3.1rem);
     line-height: 1.12;
-    color: #111827;
+    color: var(--paper-strong);
   }
 
   .paper-subtitle {
     margin: 1rem 0 0;
     font-size: 1.1rem;
     line-height: 1.75;
-    color: #374151;
+    color: var(--paper-text);
   }
 
   .paper-actions {
@@ -86,15 +126,15 @@ redirect_from:
   }
 
   .paper-button.primary {
-    color: #ffffff;
-    background: #0f172a;
+    color: var(--paper-button-primary-text);
+    background: var(--paper-button-primary-bg);
     box-shadow: 0 14px 24px rgba(15, 23, 42, 0.16);
   }
 
   .paper-button.secondary {
-    color: #0f172a;
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid #cbd5e1;
+    color: var(--paper-button-secondary-text);
+    background: var(--paper-button-secondary-bg);
+    border: 1px solid var(--paper-button-secondary-border);
   }
 
   .paper-grid {
@@ -106,23 +146,23 @@ redirect_from:
 
   .paper-card {
     padding: 1.5rem;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--paper-card-border);
     border-radius: 20px;
-    background: #ffffff;
-    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+    background: var(--paper-card-bg);
+    box-shadow: var(--paper-shadow-md);
   }
 
   .paper-card h2,
   .paper-card h3 {
     margin-top: 0;
     margin-bottom: 0.9rem;
-    color: #111827;
+    color: var(--paper-strong);
   }
 
   .paper-card p {
     margin-bottom: 0;
     line-height: 1.8;
-    color: #374151;
+    color: var(--paper-text);
   }
 
   .paper-hero-figure {
@@ -135,23 +175,23 @@ redirect_from:
     width: 100%;
     height: auto;
     border-radius: 20px;
-    border: 1px solid #dbe3ef;
-    background: #ffffff;
-    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    border: 1px solid var(--paper-border);
+    background: var(--paper-card-bg);
+    box-shadow: var(--paper-shadow-lg);
   }
 
   .paper-caption {
     margin: 0.8rem 0 0;
     font-size: 0.97rem;
     line-height: 1.7;
-    color: #4b5563;
+    color: var(--paper-muted);
   }
 
   .paper-hero-note {
     margin-top: 0.8rem;
     font-size: 0.96rem;
     line-height: 1.65;
-    color: #4b5563;
+    color: var(--paper-muted);
   }
 
   .paper-meta {
@@ -162,7 +202,7 @@ redirect_from:
   .paper-meta-item strong {
     display: block;
     margin-bottom: 0.35rem;
-    color: #111827;
+    color: var(--paper-strong);
   }
 
   .paper-meta-item a {
@@ -176,15 +216,15 @@ redirect_from:
 
   .paper-demo-card {
     padding: 1.5rem;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--paper-card-border);
     border-radius: 20px;
-    background: #ffffff;
-    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+    background: var(--paper-card-bg);
+    box-shadow: var(--paper-shadow-md);
   }
 
   .paper-demo-card h3 {
     margin: 0 0 0.75rem;
-    color: #111827;
+    color: var(--paper-strong);
   }
 
   .paper-demo-heading {
@@ -200,8 +240,8 @@ redirect_from:
     align-items: center;
     padding: 0.28rem 0.7rem;
     border-radius: 999px;
-    background: #e8f0ff;
-    color: #1d4ed8;
+    background: var(--paper-kicker-bg);
+    color: var(--paper-kicker-text);
     font-size: 0.82rem;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -210,12 +250,12 @@ redirect_from:
 
   .paper-demo-section-title {
     margin: 0 0 0.25rem;
-    color: #111827;
+    color: var(--paper-strong);
   }
 
   .paper-demo-section-note {
     margin: 0 0 1rem;
-    color: #4b5563;
+    color: var(--paper-muted);
     line-height: 1.7;
   }
 
@@ -223,31 +263,31 @@ redirect_from:
     display: grid;
     gap: 0.65rem;
     margin-bottom: 1rem;
-    color: #374151;
+    color: var(--paper-text);
     line-height: 1.75;
   }
 
   .paper-demo-text strong {
-    color: #111827;
+    color: var(--paper-strong);
   }
 
   .paper-audio-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 0.9rem;
   }
 
   .paper-audio-item {
     padding: 0.9rem;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--paper-card-border);
     border-radius: 16px;
-    background: #f8fafc;
+    background: var(--paper-audio-bg);
   }
 
   .paper-audio-item strong {
     display: block;
     margin-bottom: 0.55rem;
-    color: #111827;
+    color: var(--paper-strong);
   }
 
   .paper-audio-item audio {
@@ -257,10 +297,10 @@ redirect_from:
   .paper-figure {
     margin: 0;
     padding: 1.5rem;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--paper-card-border);
     border-radius: 20px;
-    background: #ffffff;
-    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
+    background: var(--paper-card-bg);
+    box-shadow: var(--paper-shadow-md);
   }
 
   @media (max-width: 900px) {
@@ -384,6 +424,10 @@ redirect_from:
           <audio controls preload="none" src="/files/audio-demo/prompt-common_voice_en_2331.wav"></audio>
         </div>
         <div class="paper-audio-item">
+          <strong>Ground Truth</strong>
+          <audio controls preload="none" src="/files/audio-demo/gt-common_voice_en_2331-common_voice_en_2330.wav"></audio>
+        </div>
+        <div class="paper-audio-item">
           <strong>CosyVoice2</strong>
           <audio controls preload="none" src="/files/audio-demo/seed-common_voice_en_2331-common_voice_en_2330.wav"></audio>
         </div>
@@ -411,6 +455,10 @@ redirect_from:
         <div class="paper-audio-item">
           <strong>Prompt</strong>
           <audio controls preload="none" src="/files/audio-demo/prompt-common_voice_en_15734837.wav"></audio>
+        </div>
+        <div class="paper-audio-item">
+          <strong>Ground Truth</strong>
+          <audio controls preload="none" src="/files/audio-demo/gt-common_voice_en_15734837-common_voice_en_15734838.wav"></audio>
         </div>
         <div class="paper-audio-item">
           <strong>CosyVoice2</strong>
@@ -442,6 +490,10 @@ redirect_from:
           <audio controls preload="none" src="/files/audio-demo/prompt-common_voice_en_17161.wav"></audio>
         </div>
         <div class="paper-audio-item">
+          <strong>Ground Truth</strong>
+          <audio controls preload="none" src="/files/audio-demo/gt-common_voice_en_17161-common_voice_en_17160.wav"></audio>
+        </div>
+        <div class="paper-audio-item">
           <strong>CosyVoice2</strong>
           <audio controls preload="none" src="/files/audio-demo/seed-common_voice_en_17161-common_voice_en_17160.wav"></audio>
         </div>
@@ -471,6 +523,10 @@ redirect_from:
           <audio controls preload="none" src="/files/audio-demo/prompt-zh-10002739-00000104.wav"></audio>
         </div>
         <div class="paper-audio-item">
+          <strong>Ground Truth</strong>
+          <audio controls preload="none" src="/files/audio-demo/gt-zh-10002739-00000011.wav"></audio>
+        </div>
+        <div class="paper-audio-item">
           <strong>CosyVoice2</strong>
           <audio controls preload="none" src="/files/audio-demo/seed-zh-10002739-00000011.wav"></audio>
         </div>
@@ -498,6 +554,10 @@ redirect_from:
         <div class="paper-audio-item">
           <strong>Prompt</strong>
           <audio controls preload="none" src="/files/audio-demo/prompt-zh-10002481-00000010.wav"></audio>
+        </div>
+        <div class="paper-audio-item">
+          <strong>Ground Truth</strong>
+          <audio controls preload="none" src="/files/audio-demo/gt-zh-10002481-00000105.wav"></audio>
         </div>
         <div class="paper-audio-item">
           <strong>CosyVoice2</strong>
