@@ -1,7 +1,7 @@
 ---
 layout: splash
 permalink: /
-title: "Adaptive Condition Optimization for Text-to-Speech via Inference-Time Gradient Guidance"
+title: "Aco-TTS Demo"
 author_profile: false
 show_title: false
 redirect_from:
@@ -68,7 +68,7 @@ redirect_from:
 
   .paper-hero {
     display: grid;
-    grid-template-columns: minmax(0, 1.02fr) minmax(420px, 0.98fr);
+    grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
     gap: 1.6rem;
     margin-top: 0.25rem;
     padding: 1.7rem 1.8rem;
@@ -77,6 +77,10 @@ redirect_from:
     background: var(--paper-bg);
     box-shadow: var(--paper-shadow-lg);
     align-items: center;
+  }
+
+  .paper-hero > * {
+    min-width: 0;
   }
 
   .paper-kicker {
@@ -307,6 +311,24 @@ redirect_from:
     .paper-hero {
       grid-template-columns: 1fr;
       padding: 1.35rem 1.1rem;
+      gap: 1.15rem;
+    }
+
+    .paper-title {
+      font-size: clamp(1.7rem, 8.6vw, 2.45rem);
+      line-height: 1.04;
+      letter-spacing: -0.025em;
+    }
+
+    .paper-subtitle {
+      margin-top: 0.95rem;
+      font-size: 0.98rem;
+      line-height: 1.62;
+    }
+
+    .paper-caption {
+      font-size: 0.92rem;
+      line-height: 1.6;
     }
 
     .paper-grid {
@@ -315,6 +337,47 @@ redirect_from:
 
     .paper-audio-grid {
       grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 560px) {
+    #main {
+      padding-left: 0.7rem;
+      padding-right: 0.7rem;
+    }
+
+    .paper-hero {
+      padding: 1.05rem 0.9rem;
+      border-radius: 20px;
+    }
+
+    .paper-kicker {
+      margin-bottom: 0.55rem;
+      font-size: 0.74rem;
+      letter-spacing: 0.1em;
+    }
+
+    .paper-title {
+      font-size: clamp(1.48rem, 10vw, 2.05rem);
+      line-height: 1.02;
+    }
+
+    .paper-actions {
+      gap: 0.65rem;
+      margin-top: 0.95rem;
+    }
+
+    .paper-button {
+      min-width: 0;
+      flex: 1 1 0;
+      padding: 0.8rem 0.95rem;
+    }
+
+    .paper-card,
+    .paper-demo-card,
+    .paper-figure {
+      padding: 1.05rem;
+      border-radius: 18px;
     }
   }
 </style>
