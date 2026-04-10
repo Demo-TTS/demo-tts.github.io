@@ -97,7 +97,7 @@ redirect_from:
   }
 
   .paper-subtitle {
-    margin: 0.85rem 0 0;
+    margin: 1.15rem 0 0;
     max-width: 44rem;
     font-size: 1.02rem;
     line-height: 1.68;
