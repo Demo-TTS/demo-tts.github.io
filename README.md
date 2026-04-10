@@ -17,7 +17,7 @@ Website: [https://demo-tts.github.io/](https://demo-tts.github.io/)
 
 - Demo page: [https://demo-tts.github.io/](https://demo-tts.github.io/)
 - Paper PDF: [./files/Aco_TTS.pdf](./files/Aco_TTS.pdf)
-- Code repository: [https://anonymous.4open.science/r/code-7E01](https://anonymous.4open.science/r/code-7E01)
+- Code repository: [https://github.com/Demo-TTS/Aco-TTS](https://github.com/Demo-TTS/Aco-TTS)
 
 ## Local Preview
 
