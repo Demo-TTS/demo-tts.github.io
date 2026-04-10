@@ -101,11 +101,20 @@ redirect_from:
 
   .paper-title {
     margin: 0 auto;
-    max-width: min(100%, 24ch);
-    font-size: clamp(1.7rem, 2.7vw, 2.85rem);
-    line-height: 1.08;
+    max-width: min(100%, 16ch);
+    font-size: clamp(2rem, 3.2vw, 3.35rem);
+    line-height: 1.04;
     letter-spacing: -0.03em;
     color: var(--paper-strong);
+  }
+
+  .paper-title-subline {
+    margin: 0.4rem auto 0;
+    max-width: 100%;
+    font-size: clamp(1.02rem, 1.45vw, 1.35rem);
+    line-height: 1.45;
+    color: var(--paper-muted);
+    text-align: center;
   }
 
   .paper-title-line {
@@ -193,6 +202,8 @@ redirect_from:
   }
 
   .paper-caption {
+    display: block;
+    width: min(100%, 34rem);
     margin: 0.85rem auto 0;
     max-width: 34rem;
     font-size: 0.97rem;
@@ -358,10 +369,14 @@ redirect_from:
     }
 
     .paper-title {
-      max-width: min(100%, 18ch);
-      font-size: clamp(1.68rem, 5.6vw, 2.3rem);
-      line-height: 1.08;
+      max-width: min(100%, 15ch);
+      font-size: clamp(1.82rem, 5.3vw, 2.45rem);
+      line-height: 1.06;
       letter-spacing: -0.025em;
+    }
+
+    .paper-title-subline {
+      font-size: clamp(0.98rem, 2.7vw, 1.18rem);
     }
 
     .paper-caption {
@@ -397,8 +412,13 @@ redirect_from:
 
     .paper-title {
       max-width: 100%;
-      font-size: clamp(1.42rem, 7.4vw, 1.82rem);
-      line-height: 1.08;
+      font-size: clamp(1.4rem, 7vw, 1.78rem);
+      line-height: 1.06;
+    }
+
+    .paper-title-subline {
+      font-size: 0.95rem;
+      line-height: 1.4;
     }
 
     .paper-actions {
@@ -436,8 +456,9 @@ redirect_from:
       <p class="paper-kicker">TTS Paper Demo</p>
       <h1 class="paper-title">
         <span class="paper-title-line">Adaptive Condition Optimization for</span>
-        <span class="paper-title-line">Text-to-Speech via Inference-Time Gradient Guidance</span>
+        <span class="paper-title-line">Text-to-Speech</span>
       </h1>
+      <p class="paper-title-subline">via Inference-Time Gradient Guidance</p>
     </div>
 
     <figure class="paper-hero-figure">
