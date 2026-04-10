@@ -84,6 +84,12 @@ redirect_from:
     min-width: 0;
   }
 
+  .paper-hero-copy {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+  }
+
   .paper-kicker {
     margin: 0 0 0.4rem;
     font-size: 0.9rem;
@@ -94,9 +100,9 @@ redirect_from:
   }
 
   .paper-title {
-    margin: 0;
-    max-width: 14.5ch;
-    font-size: clamp(1.85rem, 3.2vw, 3.1rem);
+    margin: 0 auto;
+    max-width: min(100%, 24ch);
+    font-size: clamp(1.7rem, 2.7vw, 2.85rem);
     line-height: 1.08;
     letter-spacing: -0.03em;
     color: var(--paper-strong);
@@ -104,7 +110,6 @@ redirect_from:
 
   .paper-title-line {
     display: block;
-    white-space: nowrap;
   }
 
   .paper-actions {
@@ -353,14 +358,10 @@ redirect_from:
     }
 
     .paper-title {
-      max-width: 13.5ch;
-      font-size: clamp(1.72rem, 6.5vw, 2.45rem);
+      max-width: min(100%, 18ch);
+      font-size: clamp(1.68rem, 5.6vw, 2.3rem);
       line-height: 1.08;
       letter-spacing: -0.025em;
-    }
-
-    .paper-title-line {
-      white-space: normal;
     }
 
     .paper-caption {
@@ -396,7 +397,7 @@ redirect_from:
 
     .paper-title {
       max-width: 100%;
-      font-size: clamp(1.48rem, 8.8vw, 1.95rem);
+      font-size: clamp(1.42rem, 7.4vw, 1.82rem);
       line-height: 1.08;
     }
 
@@ -431,7 +432,7 @@ redirect_from:
 
 <div class="paper-shell">
   <section class="paper-hero">
-    <div>
+    <div class="paper-hero-copy">
       <p class="paper-kicker">TTS Paper Demo</p>
       <h1 class="paper-title">
         <span class="paper-title-line">Adaptive Condition Optimization for</span>
