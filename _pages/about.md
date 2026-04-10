@@ -470,7 +470,7 @@ redirect_from:
 
     <div class="paper-actions">
       <a class="paper-button primary" href="/files/Aco_TTS.pdf">Read Paper</a>
-      <a class="paper-button secondary" href="https://github.com/Demo-TTS/code-7E01">View Code</a>
+      <a class="paper-button secondary" href="https://anonymous.4open.science/r/code-7E01">View Code</a>
     </div>
 
     <ul class="paper-hero-meta">
@@ -514,7 +514,7 @@ redirect_from:
       </div>
       <div class="paper-meta-item">
         <strong>Code</strong>
-        <a href="https://github.com/Demo-TTS/code-7E01">https://github.com/Demo-TTS/code-7E01</a>
+        <a href="https://anonymous.4open.science/r/code-7E01">https://anonymous.4open.science/r/code-7E01</a>
       </div>
       <div class="paper-meta-item">
         <strong>Demo Site</strong>
