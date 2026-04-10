@@ -85,9 +85,11 @@ redirect_from:
   }
 
   .paper-hero-copy {
-    width: 100%;
     display: grid;
     justify-items: center;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
   }
 
   .paper-kicker {
@@ -100,12 +102,16 @@ redirect_from:
   }
 
   .paper-title {
+    display: grid;
+    justify-items: center;
+    width: fit-content;
+    max-width: 100%;
     margin: 0 auto;
-    max-width: min(100%, 28ch);
     font-size: clamp(1.7rem, 2.5vw, 2.7rem);
     line-height: 1.08;
     letter-spacing: -0.03em;
     color: var(--paper-strong);
+    text-align: center;
   }
 
   .paper-title-line {
@@ -195,9 +201,9 @@ redirect_from:
 
   .paper-caption {
     display: block;
-    width: min(100%, 34rem);
+    width: fit-content;
     margin: 0.85rem auto 0;
-    max-width: 34rem;
+    max-width: min(100%, 34rem);
     font-size: 0.97rem;
     line-height: 1.7;
     color: var(--paper-muted);
@@ -361,6 +367,7 @@ redirect_from:
     }
 
     .paper-title {
+      width: 100%;
       max-width: min(100%, 24ch);
       font-size: clamp(1.52rem, 3.9vw, 2.15rem);
       line-height: 1.06;
@@ -399,6 +406,7 @@ redirect_from:
     }
 
     .paper-title {
+      width: 100%;
       max-width: 100%;
       font-size: clamp(1.24rem, 5.4vw, 1.55rem);
       line-height: 1.06;
