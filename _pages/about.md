@@ -201,13 +201,14 @@ redirect_from:
 
   .paper-caption {
     display: block;
-    width: fit-content;
+    width: 100%;
     margin: 0.85rem auto 0;
-    max-width: min(100%, 34rem);
+    max-width: min(100%, 27ch);
     font-size: 0.97rem;
     line-height: 1.7;
     color: var(--paper-muted);
     text-align: center;
+    text-wrap: balance;
   }
 
   .paper-hero-meta {
@@ -375,6 +376,7 @@ redirect_from:
     }
 
     .paper-caption {
+      max-width: min(100%, 25ch);
       font-size: 0.92rem;
       line-height: 1.6;
     }
