@@ -71,7 +71,7 @@ redirect_from:
     grid-template-columns: minmax(0, 1.02fr) minmax(420px, 0.98fr);
     gap: 1.6rem;
     margin-top: 0.25rem;
-    padding: 2rem;
+    padding: 1.7rem 1.8rem;
     border: 1px solid var(--paper-border);
     border-radius: 24px;
     background: var(--paper-bg);
@@ -90,15 +90,17 @@ redirect_from:
 
   .paper-title {
     margin: 0;
-    font-size: clamp(2rem, 4vw, 3.1rem);
-    line-height: 1.12;
+    font-size: clamp(1.85rem, 3.35vw, 2.95rem);
+    line-height: 1.06;
+    letter-spacing: -0.03em;
     color: var(--paper-strong);
   }
 
   .paper-subtitle {
-    margin: 1rem 0 0;
-    font-size: 1.1rem;
-    line-height: 1.75;
+    margin: 0.85rem 0 0;
+    max-width: 44rem;
+    font-size: 1.02rem;
+    line-height: 1.68;
     color: var(--paper-text);
   }
 
@@ -106,7 +108,7 @@ redirect_from:
     display: flex;
     flex-wrap: wrap;
     gap: 0.85rem;
-    margin-top: 1.5rem;
+    margin-top: 1.15rem;
   }
 
   .paper-button {
@@ -184,13 +186,6 @@ redirect_from:
     margin: 0.8rem 0 0;
     font-size: 0.97rem;
     line-height: 1.7;
-    color: var(--paper-muted);
-  }
-
-  .paper-hero-note {
-    margin-top: 0.8rem;
-    font-size: 0.96rem;
-    line-height: 1.65;
     color: var(--paper-muted);
   }
 
@@ -311,7 +306,7 @@ redirect_from:
 
     .paper-hero {
       grid-template-columns: 1fr;
-      padding: 1.5rem 1.2rem;
+      padding: 1.35rem 1.1rem;
     }
 
     .paper-grid {
@@ -340,10 +335,6 @@ redirect_from:
         <a class="paper-button primary" href="/files/Aco_TTS.pdf">Read Paper</a>
         <a class="paper-button secondary" href="https://github.com/Demo-TTS/ACO-TTS">View Code</a>
       </div>
-
-      <p class="paper-hero-note">
-        Training-free guidance at inference time for more robust zero-shot TTS.
-      </p>
     </div>
 
     <figure class="paper-hero-figure">
