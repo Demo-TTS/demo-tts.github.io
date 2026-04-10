@@ -185,6 +185,8 @@ redirect_from:
 
   .paper-hero-figure {
     margin: 0;
+    display: grid;
+    justify-items: center;
     width: min(100%, 980px);
   }
 
@@ -201,9 +203,9 @@ redirect_from:
 
   .paper-caption {
     display: block;
-    width: 100%;
+    width: min(100%, 27ch);
     margin: 0.85rem auto 0;
-    max-width: min(100%, 27ch);
+    max-width: 27ch;
     font-size: 0.97rem;
     line-height: 1.7;
     color: var(--paper-muted);
