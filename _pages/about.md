@@ -95,11 +95,16 @@ redirect_from:
 
   .paper-title {
     margin: 0;
-    max-width: 22ch;
-    font-size: clamp(2rem, 4.2vw, 3.85rem);
-    line-height: 1.06;
+    max-width: 14.5ch;
+    font-size: clamp(1.85rem, 3.2vw, 3.1rem);
+    line-height: 1.08;
     letter-spacing: -0.03em;
     color: var(--paper-strong);
+  }
+
+  .paper-title-line {
+    display: block;
+    white-space: nowrap;
   }
 
   .paper-actions {
@@ -183,7 +188,8 @@ redirect_from:
   }
 
   .paper-caption {
-    margin: 0.8rem 0 0;
+    margin: 0.85rem auto 0;
+    max-width: 34rem;
     font-size: 0.97rem;
     line-height: 1.7;
     color: var(--paper-muted);
@@ -347,10 +353,14 @@ redirect_from:
     }
 
     .paper-title {
-      max-width: 17ch;
-      font-size: clamp(1.85rem, 7.5vw, 2.75rem);
+      max-width: 13.5ch;
+      font-size: clamp(1.72rem, 6.5vw, 2.45rem);
       line-height: 1.08;
       letter-spacing: -0.025em;
+    }
+
+    .paper-title-line {
+      white-space: normal;
     }
 
     .paper-caption {
@@ -385,8 +395,8 @@ redirect_from:
     }
 
     .paper-title {
-      max-width: 15ch;
-      font-size: clamp(1.62rem, 9.6vw, 2.18rem);
+      max-width: 100%;
+      font-size: clamp(1.48rem, 8.8vw, 1.95rem);
       line-height: 1.08;
     }
 
@@ -423,7 +433,10 @@ redirect_from:
   <section class="paper-hero">
     <div>
       <p class="paper-kicker">TTS Paper Demo</p>
-      <h1 class="paper-title">Adaptive Condition Optimization for Text-to-Speech<br>via Inference-Time Gradient Guidance</h1>
+      <h1 class="paper-title">
+        <span class="paper-title-line">Adaptive Condition Optimization for</span>
+        <span class="paper-title-line">Text-to-Speech via Inference-Time Gradient Guidance</span>
+      </h1>
     </div>
 
     <figure class="paper-hero-figure">
